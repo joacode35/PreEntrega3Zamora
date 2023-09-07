@@ -1,3 +1,4 @@
+//Estructura de datos
 class Stock_fitness {
   constructor(producto, precio, stock) {
     this.producto = producto;
@@ -30,6 +31,7 @@ class Stock_fitness {
   }
 }
 
+//Productos
 let listaProductos = [];
 
 listaProductos.unshift(new Stock_fitness("proteina", 15000, 4));
@@ -38,12 +40,14 @@ listaProductos.unshift(new Stock_fitness("gymball", 10000, 0));
 listaProductos.unshift(new Stock_fitness("corebag", 8000, 10));
 listaProductos.unshift(new Stock_fitness("creatina", 20000, 3));
 
+//Filtrado de stock
 for (let Stock_fitness of listaProductos) {
   if (Stock_fitness.stock > 0) {
     Stock_fitness.get_datos();
   }
 }
 
+//Compra
 let pregunta_lista = prompt(
   "¿quiere ver la lista de precios? responda con si o no"
 );
@@ -74,6 +78,7 @@ do {
   }
 } while (pregunta_lista != "error");
 
+//Consulta de stock
 function buscarProducto(Stock_fitness) {
   return Stock_fitness.producto == compraProducto;
 }
